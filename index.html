@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Trivia Películas y Series</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+	</head>
+
+<body>
+<div id="contenedor1" class="fondoAmarillo centrar" >
+
+	<h1>Bienvenides a un nuevo juego de Trivia Películas y Series</h1>
+	<img src="http://data.learnpad.co/organizations/10648/camara.png" width="100" height="100">
+	<h3 > Ingresa tu nombre aquí para comenzar </h3>
+	<input type="text" name="nombrejugador" id= "nombreDado">
+	<br>
+	<br>
+	<button onclick="cargarNombre()" class= "centrar"> Aceptar</button>
+
+</div>
+
+<div id="contenedor2" class="fondoAmarillo centrado">
+
+  <center><h1>  Hola <span id="nombrePersona" ></span>, bienvenid@</h1></center>
+  <br/>
+  <center><img src="http://4.bp.blogspot.com/_wpJUcPU80-U/TEy-aLVNDcI/AAAAAAAAAtY/DVDQioDyZN8/s1600/television.png" width="150" height="150" align="middle"></img></center>
+  </br>
+	<center><h3> Selecciona el tema de tu trivia</h3>
+  <br/>
+	<button  onclick="peliculas()"> Películas</button>
+	<button onclick="series()"> Series</button></center>
+
+</div>
+
+
+<div id="preguntaPeliculasUno" class="fondoAmarillo centrado">
+
+	<h2> ¿Cuál es el actor que interpreta a Jack en la película Titanic?</h2>
+  <br/>
+    <center><img src="https://pngimg.com/uploads/titanic/titanic_PNG41.png" width="150" height="150" class="centrar"></img><br/></center>
+	<input type="radio" name="resp1p">Tom cruise<br/>
+	<input type="radio" name="resp1p">Matt damond<br/>
+	<input type="radio" name="resp1p" id="p1p_correcta">Leonardo Di Caprio<br/>
+  <br/>
+  <br/>
+	<button onclick= "pregunta2Peliculas()" >Siguiente</button>
+
+</div>
+
+<div id="preguntaPeliculasDos" class="fondoAmarillo">
+
+	<h1> ¿En que película aparece el actor Jason Statham?</h1>
+  <br/>
+  <center><img src="https://i.dlpng.com/static/png/14660_preview.png" width="120" height="120" class="centrar" ></img><br/></center>
+	<input type="radio" name="resp2p">El Teletransportador<br/>
+	<input type="radio" name="resp2p">El Ilusionista<br/>
+	<input type="radio" name="resp2p" id="p2p_correcta">El Transportador<br/>
+<br/>
+<br/>
+	<button onclick= "pregunta3Peliculas()" >Siguiente</button>
+
+
+</div>
+
+<div id="preguntaPeliculasTres" class="fondoAmarillo">
+
+	<h1> ¿En que película no ha participado Johnny Deep?</h1>
+  <center><img src="https://i.dlpng.com/static/png/185149_preview.png" width="120" height="150" class="centrar"></img><br/></center>
+	<input type="radio" name="resp3p">Piratas del Caribe<br/>
+	<input type="radio" name="resp3p" id="p3p_correcta" >Mi pobre angelito<br/>
+	<input type="radio" name="resp3p"  >El joven manos de tijera<br/>
+  <br/>
+	<button onclick= "pantallaFinal()" >Siguiente</button>
+
+
+</div>
+
+<div id="preguntaSeriesUno" class="fondoRojo">
+
+	<h2> ¿Cual es el nombre de la actriz que interpreta a "eleven" en Stranger Things?</h2>
+  <center><img src="https://cdn140.picsart.com/254920655018212.png?r1024x1024" width="120" height="120" class="centrar"></img><br/></center>
+	<input type="radio" name="resp4p">Dakota fanning<br/>
+	<input type="radio" name="resp4p" id="p4p_correcta" >Millie Bobby Brown<br/>
+	<input type="radio" name="resp4p"  >Emma Watson<br/>
+  <br/>
+	<button onclick= "pregunta2Series()" >Siguiente</button>
+
+
+</div>
+
+<div id="preguntaSeriesDos" class="fondoRojo">
+
+	<h2> ¿Cómo se llama la serie donde un profesor y su alumno cocinan drogas?</h2>
+  <br/>
+  <center><img src="http://pluspng.com/img-png/breaking-bad-png--375.png" width="120" height="120" class="centrar"></img><br/></center>
+	<input type="radio" name="resp5p">Dark<br/>
+	<input type="radio" name="resp5p" id="p5p_correcta" >Breaking Bad<br/>
+	<input type="radio" name="resp5p"  >La casa de papel<br/>
+  <br/>
+	<button onclick= "pregunta3Series()" >Siguiente</button>
+
+</div>
+
+<div id="preguntaSeriesTres" class="fondoRojo">
+
+	<h2> ¿A qué Dios ve Ragnar en el primer capítulo de la primera temporada?</h2>
+  <br/>
+  <center><img src="https://pngimage.net/wp-content/uploads/2018/06/ragnar-png-7.png" width="120" height="150" class="centrar"></img><br/></center>
+	<input type="radio" name="resp6p">Thor<br/>
+	<input type="radio" name="resp6p" id="p6p_correcta" >Odin<br/>
+	<input type="radio" name="resp6p"  >Zeus<br/>
+  <br/>
+	<button onclick= "pantallaFinalSeries()" >Siguiente</button>
+
+</div>
+
+<div id="muestraResultados" class="fondoRojo">
+
+	<center><h1> Tus resultados son</h1></center>
+	<ul>
+		<li><span id= "mostrarCorrectas"></span>  Respuestas correctas</li>
+		<li><span id= "mostrarIncorrectas"></span> Respuestas Incorrectas</li>
+    <br/>
+    <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Simpsons_tv_icon.svg/1024px-Simpsons_tv_icon.svg.png" width="170" height="170" class="centrar"></img><br/></center>
+    <br/>
+    <br/>
+		<center><button onclick= "volverAjugar()" >Volver a jugar</button></center>
+	</ul>
+
+</div>
+
+
+
+
+<script type="text/javascript" src="app.js"></script>
+
+
+</body>
+</html>
